@@ -9,4 +9,6 @@ app = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
 app.add_handler(CommandHandler("add_product", handle_add_product))
 
 print("✅ Bot is polling Telegram...")
+import subprocess
+subprocess.run(["playwright", "install", "chromium"])
 app.run_polling()
